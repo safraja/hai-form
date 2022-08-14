@@ -22,7 +22,7 @@ At the same time however, it is not planned to address any field type very deepl
 
 So if you are happy with a somewhat more basic solution (such as text masks) and don't need any more complex functionality for your forms, the Hai Form library may be ideal for you, otherwise I recommend taking a look at many great libraries listed below that served as inspiration for the Hai Form library.
 
-## Instalation
+## Installation
 Download the library files from the 'dist' directory. You can choose between a basic version ('basic' directory) or a version with included external libraries ('with-dependencies').
 
 ## Usage
@@ -76,6 +76,10 @@ You can then start using the library via the HaiInput.create() function. The fir
 
 ## Dependencies
 The [Fuse.js](https://github.com/krisk/fuse) library is used for searching (filtering) options in selects.
+
+## Vue.js version
+This library is updated irregularly for use with the Vue.js framework. Code is available here:
+[https://github.com/safraja/hai-form-vue](https://github.com/safraja/hai-form-vue)
 
 ## Inspiration and alternatives
 This library was created as part of a thesis, inspiration for its creation was taken from the projects below.
