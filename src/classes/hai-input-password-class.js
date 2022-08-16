@@ -68,6 +68,9 @@ class HaiInputPassword extends HaiInputText
         let id = Math.floor(Math.random() * (max - min) + min);
         twin.id = `input-${id}`;
 
+        await this.processAttributes();
+        await this.processParameters();
+
         let inputWrapper = document.createElement('div');
         inputWrapper.classList.add('hai-input-element');
 
@@ -118,9 +121,6 @@ class HaiInputPassword extends HaiInputText
         this.twin = twin;
         this.labelElement = labelDiv;
         this.warningElement = warningDiv;
-
-        await this.processAttributes();
-        await this.processParameters();
 
         if(this.placeholder !== null)
         {
@@ -459,7 +459,7 @@ class HaiInputPassword extends HaiInputText
         }
         if(this.requiredCharacters.uppercaseLetter > this.countOccurrences(this.value, /[A-Z]/g))
         {
-            return {success: false, message: HaiInput.dictionary['min-lowercase-letters']
+            return {success: false, message: HaiInput.dictionary['min-uppercase-letters']
                     .replace('{{uppercaseLetter}}', this.requiredCharacters.uppercaseLetter)};
         }
         if(this.requiredCharacters.number > this.countOccurrences(this.value, /[0-9]/g))

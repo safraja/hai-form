@@ -630,3 +630,11 @@
 {
     padding-left: 25px;
 }
+.hai-input-element .meter
+{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+    padding: 0;
+}
